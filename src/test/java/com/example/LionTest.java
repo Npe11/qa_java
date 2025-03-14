@@ -26,8 +26,8 @@ public class LionTest {
     @Test
     public void testGetFood() throws Exception {
         Feline felineMock = mock(Feline.class);
-        List<String> mockFood = List.of("Мясо", "Рыба");
-        when(felineMock.eatMeat()).thenReturn(mockFood);
+        List<String> mockFood = List.of("Животные", "Птицы", "Рыба");
+        when(felineMock.getFood("Хищник")).thenReturn(mockFood);
         Lion lion = new Lion("Самец", felineMock);
         assertEquals(mockFood, lion.getFood(), "Метод getFood должен возвращать список продуктов, полученный от зависимости");
     }
